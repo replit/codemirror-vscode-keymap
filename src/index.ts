@@ -75,6 +75,23 @@ import {
 import { nextDiagnostic, openLintPanel } from '@codemirror/lint';
 
 export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
+  { key: 'Ctrl-Space', run: startCompletion },
+  { key: 'Escape', run: closeCompletion },
+  { key: 'ArrowDown', run: moveCompletionSelection(true) },
+  { key: 'ArrowUp', run: moveCompletionSelection(false) },
+  { key: 'PageDown', run: moveCompletionSelection(true, 'page') },
+  { key: 'PageUp', run: moveCompletionSelection(false, 'page') },
+  { key: 'Enter', run: acceptCompletion },
+  { key: 'Tab', run: acceptCompletion },
+  
+  { key: 'Mod-f', run: openSearchPanel, scope: 'editor search-panel' },
+  { key: 'Escape', run: closeSearchPanel, scope: 'editor search-panel' },
+  { key: 'Alt-Enter', run: selectMatches, scope: 'editor search-panel' },
+  { key: 'Mod-Alt-Enter', run: replaceAll, scope: 'editor search-panel' },
+  { key: 'Alt-g', run: gotoLine },
+  { key: 'Mod-d', run: selectNextOccurrence, preventDefault: true },
+  { key: 'Shift-Mod-l', run: selectSelectionMatches },
+  // Enter and shift enter handled within the search panel plugin
 
   { key: 'Enter', run: insertNewlineAndIndent },
   {
@@ -205,28 +222,10 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'Mod-/', run: toggleLineComment },
   { key: 'Shift-Alt-a', run: toggleBlockComment },
 
-  { key: 'Mod-f', run: openSearchPanel, scope: 'editor search-panel' },
-  { key: 'Escape', run: closeSearchPanel, scope: 'editor search-panel' },
-  { key: 'Alt-Enter', run: selectMatches, scope: 'editor search-panel' },
-  { key: 'Mod-Alt-Enter', run: replaceAll, scope: 'editor search-panel' },
-  { key: 'Alt-g', run: gotoLine },
-  { key: 'Mod-d', run: selectNextOccurrence, preventDefault: true },
-  { key: 'Shift-Mod-l', run: selectSelectionMatches },
-  // Enter and shift enter handled within the search panel plugin
-
   { key: 'Mod-z', run: undo, preventDefault: true },
   { key: 'Mod-y', run: redo, preventDefault: true },
   { key: 'Mod-Shift-z', run: redo, preventDefault: true },
   { key: 'Mod-u', run: undoSelection, preventDefault: true },
-
-  { key: 'Ctrl-Space', run: startCompletion },
-  { key: 'Escape', run: closeCompletion },
-  { key: 'ArrowDown', run: moveCompletionSelection(true) },
-  { key: 'ArrowUp', run: moveCompletionSelection(false) },
-  { key: 'PageDown', run: moveCompletionSelection(true, 'page') },
-  { key: 'PageUp', run: moveCompletionSelection(false, 'page') },
-  { key: 'Enter', run: acceptCompletion },
-  { key: 'Tab', run: acceptCompletion },
 
   { key: 'Mod-Shift-m', run: openLintPanel },
   { key: 'F8', run: nextDiagnostic }, // Shift should go back, but previousDiagnostic is not implemented
