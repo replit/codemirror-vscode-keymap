@@ -1,7 +1,7 @@
 import { EditorView, keymap } from '@codemirror/view';
 import { EditorState } from '@codemirror/state';
 import { javascript } from '@codemirror/lang-javascript'
-import {vscodeKeymap} from "../src/"
+import { vscodeKeymap } from "../src/"
 
 const doc = `
 function wow() {

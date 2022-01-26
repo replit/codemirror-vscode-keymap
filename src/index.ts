@@ -59,7 +59,7 @@ import {
 } from '@codemirror/search';
 import { foldCode, unfoldCode, foldAll, unfoldAll } from '@codemirror/fold';
 import {
-  toggleLineComment,
+  toggleComment,
   lineComment,
   lineUncomment,
   toggleBlockComment,
@@ -219,7 +219,7 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
 
   { key: 'Mod-k Mod-c', run: lineComment },
   { key: 'Mod-k Mod-u', run: lineUncomment },
-  { key: 'Mod-/', run: toggleLineComment },
+  { key: 'Mod-/', run: toggleComment },
   { key: 'Shift-Alt-a', run: toggleBlockComment },
 
   { key: 'Mod-z', run: undo, preventDefault: true },

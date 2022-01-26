@@ -1,12 +1,12 @@
 {
   "name": "@replit/codemirror-vscode-keymap",
   "description": "VSCode keyboard shortcuts for Codemirror 6",
-  "version": "0.19.2",
+  "version": "0.19.3",
   "author": {
     "name": "Faris Masad",
     "email": "faris@repl.it"
   },
-  "repository": "https://github.com/replit/codemirror-vscode-keymap",
+  "repository": "https://github.com/replit/codemirror-vscode-keymap.git",
   "type": "module",
   "main": "dist/index.cjs",
   "exports": {
@@ -20,7 +20,8 @@
   "scripts": {
     "dev": "vite ./dev",
     "build": "cm-buildhelper src/index.ts",
-    "test": "cm-runtests"
+    "test": "cm-runtests",
+    "publish": "npm run build && npm publish"
   },
   "peerDependencies": {
     "@codemirror/autocomplete": "0.19.x",
