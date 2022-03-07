@@ -93,7 +93,7 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'Shift-Mod-l', run: selectSelectionMatches },
   // Enter and shift enter handled within the search panel plugin
 
-  { key: 'Enter', run: insertNewlineAndIndent },
+  { key: 'Enter', run: insertNewlineAndIndent, shift: insertNewlineAndIndent },
   {
     key: 'ArrowLeft',
     run: cursorCharLeft,
