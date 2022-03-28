@@ -88,7 +88,7 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'Escape', run: closeSearchPanel, scope: 'editor search-panel' },
   { key: 'Alt-Enter', run: selectMatches, scope: 'editor search-panel' },
   { key: 'Mod-Alt-Enter', run: replaceAll, scope: 'editor search-panel' },
-  { key: 'Alt-g', run: gotoLine },
+  { key: 'Ctrl-g', run: gotoLine },
   { key: 'Mod-d', run: selectNextOccurrence, preventDefault: true },
   { key: 'Shift-Mod-l', run: selectSelectionMatches },
   // Enter and shift enter handled within the search panel plugin
