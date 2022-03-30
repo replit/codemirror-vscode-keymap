@@ -15,6 +15,11 @@ This keymap includes shortcuts for all the official extension and replaces codem
 - lint
 - search
 
+The keymap is based on the following:
+- [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+- [Mac](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+- [Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
+
 ### Usage
 ```ts
 import { EditorView, keymap } from '@codemirror/view';
@@ -42,7 +47,6 @@ new EditorView({
 ```
 
 ### Missing features
-- Insert cursor at end of each line selected Shift+Alt+I
 - Scroll Line Down	Ctrl+Down
 - Scroll Line Up	Ctrl+Up
 - Scroll Page Down	Alt+PageDown
