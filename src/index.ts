@@ -202,8 +202,8 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'Shift-Mod-k', run: deleteLine },
   { key: 'Alt-ArrowDown', run: moveLineDown },
   { key: 'Alt-ArrowUp', run: moveLineUp },
-  { key: 'Shift-Alt-ArrowDown', run: copyLineDown },
-  { key: 'Shift-Alt-ArrowUp', run: copyLineUp },
+  { win: 'Shift-Alt-ArrowDown', mac: 'Shift-Alt-ArrowDown', run: copyLineDown },
+  { win: 'Shift-Alt-ArrowUp', mac: 'Shift-Alt-ArrowUp', run: copyLineUp },
 
   { key: 'Mod-l', run: selectLine, preventDefault: true },
   { key: 'Shift-Mod-\\', run: cursorMatchingBracket },
