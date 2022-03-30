@@ -43,8 +43,6 @@ new EditorView({
 
 ### Missing features
 - Insert cursor at end of each line selected Shift+Alt+I
-- Insert Cursor Below Ctrl+Alt+Down
-- Insert Cursor Above Ctrl+Alt+Up
 - Scroll Line Down	Ctrl+Down
 - Scroll Line Up	Ctrl+Up
 - Scroll Page Down	Alt+PageDown
