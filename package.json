@@ -21,7 +21,7 @@
     "dev": "vite ./dev",
     "build": "cm-buildhelper src/index.ts",
     "test": "cm-runtests",
-    "publish": "npm run build && npm publish"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@codemirror/autocomplete": "0.19.x",
