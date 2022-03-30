@@ -32,6 +32,7 @@
     "@codemirror/history": "0.19.x",
     "@codemirror/lint": "0.19.x",
     "@codemirror/search": "0.19.x",
+    "@codemirror/state": "0.19.x",
     "@codemirror/view": "0.19.x"
   },
   "devDependencies": {
