@@ -73,7 +73,7 @@ import {
   startCompletion,
 } from '@codemirror/autocomplete';
 import { nextDiagnostic, openLintPanel } from '@codemirror/lint';
-import { addCursorDown, addCursorUp } from './multiCursor';
+import { addCursorAtEachSelectionLine, addCursorDown, addCursorUp } from './multiCursor';
 
 export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'Ctrl-Space', run: startCompletion },
@@ -174,6 +174,11 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
     linux: 'Shift-Alt-ArrowDown',
     run: addCursorDown,
     preventDefault: true,
+  },
+
+  {
+    key: 'Shift-Alt-i',
+    run: addCursorAtEachSelectionLine,
   },
 
   { key: 'Mod-End', run: cursorDocEnd, shift: selectDocEnd },
