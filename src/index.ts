@@ -73,6 +73,7 @@ import {
   startCompletion,
 } from '@codemirror/autocomplete';
 import { nextDiagnostic, openLintPanel } from '@codemirror/lint';
+import { addCursorDown, addCursorUp } from './multiCursor';
 
 export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'Ctrl-Space', run: startCompletion },
@@ -83,7 +84,7 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
   { key: 'PageUp', run: moveCompletionSelection(false, 'page') },
   { key: 'Enter', run: acceptCompletion },
   { key: 'Tab', run: acceptCompletion },
-  
+
   { key: 'Mod-f', run: openSearchPanel, scope: 'editor search-panel' },
   { key: 'Escape', run: closeSearchPanel, scope: 'editor search-panel' },
   { key: 'Alt-Enter', run: selectMatches, scope: 'editor search-panel' },
@@ -160,6 +161,19 @@ export const vscodeKeymap: ReadonlyArray<KeyBinding> = [
     mac: 'Cmd-ArrowRight',
     run: cursorLineBoundaryForward,
     shift: selectLineBoundaryForward,
+  },
+
+  {
+    key: 'Mod-Alt-ArrowUp',
+    linux: 'Shift-Alt-ArrowUp',
+    run: addCursorUp,
+    preventDefault: true,
+  },
+  {
+    key: 'Mod-Alt-ArrowDown',
+    linux: 'Shift-Alt-ArrowDown',
+    run: addCursorDown,
+    preventDefault: true,
   },
 
   { key: 'Mod-End', run: cursorDocEnd, shift: selectDocEnd },
