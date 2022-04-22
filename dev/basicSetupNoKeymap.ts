@@ -1,19 +1,9 @@
-import {keymap, highlightSpecialChars, drawSelection, highlightActiveLine, dropCursor} from "@codemirror/view"
-import {Extension, EditorState} from "@codemirror/state"
-import {history, historyKeymap} from "@codemirror/history"
-import {foldGutter, foldKeymap} from "@codemirror/fold"
-import {indentOnInput} from "@codemirror/language"
-import {lineNumbers, highlightActiveLineGutter} from "@codemirror/gutter"
-import {defaultKeymap} from "@codemirror/commands"
-import {bracketMatching} from "@codemirror/matchbrackets"
-import {closeBrackets, closeBracketsKeymap} from "@codemirror/closebrackets"
-import {searchKeymap, highlightSelectionMatches} from "@codemirror/search"
-import {autocompletion, completionKeymap} from "@codemirror/autocomplete"
-import {commentKeymap} from "@codemirror/comment"
-import {rectangularSelection} from "@codemirror/rectangular-selection"
-import {defaultHighlightStyle} from "@codemirror/highlight"
-import {lintKeymap} from "@codemirror/lint"
-
+import { rectangularSelection, lineNumbers, highlightActiveLineGutter, highlightSpecialChars, drawSelection, highlightActiveLine, dropCursor} from "@codemirror/view"
+import {EditorState} from "@codemirror/state"
+import {history} from "@codemirror/commands"
+import {indentOnInput, foldGutter, bracketMatching, defaultHighlightStyle, syntaxHighlighting} from "@codemirror/language"
+import {highlightSelectionMatches} from "@codemirror/search"
+import {closeBrackets, autocompletion} from "@codemirror/autocomplete"
 
 const basicSetup = [
   lineNumbers(),
@@ -25,14 +15,13 @@ const basicSetup = [
   dropCursor(),
   EditorState.allowMultipleSelections.of(true),
   indentOnInput(),
-  defaultHighlightStyle.fallback,
+  syntaxHighlighting(defaultHighlightStyle, {fallback: true}),
   bracketMatching(),
   closeBrackets(),
   autocompletion(),
   rectangularSelection(),
   highlightActiveLine(),
   highlightSelectionMatches(),
-]
+];
 
-
-export default basicSetup
+export default basicSetup;

@@ -47,6 +47,13 @@ import {
   selectLineStart,
   splitLine,
   transposeChars,
+  redo,
+  undo,
+  undoSelection,
+  toggleComment,
+  lineComment,
+  lineUncomment,
+  toggleBlockComment,
 } from '@codemirror/commands';
 import {
   closeSearchPanel,
@@ -57,18 +64,11 @@ import {
   selectNextOccurrence,
   selectSelectionMatches,
 } from '@codemirror/search';
-import { foldCode, unfoldCode, foldAll, unfoldAll } from '@codemirror/fold';
-import {
-  toggleComment,
-  lineComment,
-  lineUncomment,
-  toggleBlockComment,
-} from '@codemirror/comment';
-import { redo, undo, undoSelection } from '@codemirror/history';
-import { deleteBracketPair } from '@codemirror/closebrackets';
+import { foldCode, unfoldCode, foldAll, unfoldAll } from '@codemirror/language';
 import {
   acceptCompletion,
   closeCompletion,
+  deleteBracketPair,
   moveCompletionSelection,
   startCompletion,
 } from '@codemirror/autocomplete';

@@ -1,4 +1,4 @@
-import { EditorSelection, SelectionRange } from '@codemirror/state';
+import { EditorSelection } from '@codemirror/state';
 import { Command } from '@codemirror/view';
 
 const createAddCursor =
