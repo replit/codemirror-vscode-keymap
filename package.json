@@ -1,7 +1,7 @@
 {
   "name": "@replit/codemirror-vscode-keymap",
   "description": "VSCode keyboard shortcuts for Codemirror 6",
-  "version": "0.20.0",
+  "version": "6.0.0",
   "author": {
     "name": "Faris Masad",
     "email": "faris@repl.it"
@@ -24,25 +24,25 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@codemirror/autocomplete": "^0.20.0",
-    "@codemirror/commands": "^0.20.0",
-    "@codemirror/comment": "^0.20.0",
-    "@codemirror/language": "^0.20.0",
-    "@codemirror/lint": "^0.20.0",
-    "@codemirror/search": "^0.20.0",
-    "@codemirror/state": "^0.20.0",
-    "@codemirror/view": "^0.20.0"
+    "@codemirror/autocomplete": "^6.0.0",
+    "@codemirror/commands": "^6.0.0",
+    "@codemirror/comment": "^6.0.0",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/lint": "^6.0.0",
+    "@codemirror/search": "^6.0.0",
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0"
   },
   "devDependencies": {
-    "@codemirror/autocomplete": "^0.20.0",
-    "@codemirror/buildhelper": "^0.1.15",
-    "@codemirror/commands": "^0.20.0",
-    "@codemirror/lang-javascript": "^0.20.0",
-    "@codemirror/language": "^0.20.0",
-    "@codemirror/lint": "^0.20.0",
-    "@codemirror/search": "^0.20.0",
-    "@codemirror/state": "^0.20.0",
-    "@codemirror/view": "^0.20.1",
+    "@codemirror/autocomplete": "^6.0.0",
+    "@codemirror/buildhelper": "^0.1.16",
+    "@codemirror/commands": "^6.0.0",
+    "@codemirror/lang-javascript": "^6.0.0",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/lint": "^6.0.0",
+    "@codemirror/search": "^6.0.0",
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0",
     "@lezer/highlight": "^0.16.0",
     "vite": "^2.8.6"
   }
