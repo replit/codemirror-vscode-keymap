@@ -6,10 +6,10 @@ const createAddCursor =
   (view) => {
     const forward = direction === 'down';
 
-    const selection = view.state.selection;
+    let selection = view.state.selection;
 
     for (const r of selection.ranges) {
-      selection.addRange(view.moveVertically(r, forward));
+      selection = selection.addRange(view.moveVertically(r, forward));
     }
 
     view.dispatch({ selection });
@@ -33,9 +33,9 @@ export const addCursorAtEachSelectionLine: Command = (view) => {
       const anchor = Math.min(line.to, r.to);
 
       if (selection) {
-        selection.addRange(EditorSelection.range(anchor, anchor));
+        selection = selection.addRange(EditorSelection.range(anchor, anchor));
       } else {
-        EditorSelection.single(anchor);
+        selection = EditorSelection.single(anchor);
       }
 
       pos = line.to + 1;
